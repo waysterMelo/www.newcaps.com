@@ -1,0 +1,57 @@
+@media (min-width: 320px) and (max-width: 414px) {
+    body{
+        background-image: linear-gradient( 109.6deg,  rgba(14,11,56,1) 11.2%, rgba(239,37,37,1) 91.1% );
+    }
+    nav img{
+        width: 70%;background-color: whitesmoke;
+    }
+    #top .menu{
+        padding: 0;
+        margin: 0;
+    }
+    #produtos .price{
+    color: white;
+    }
+    #sloganProdutos .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-height: 70px;
+    max-height: 70px;
+    }
+    #sloganProdutos .product-grid4{
+        zoom: 0.7;
+    }
+    #sidebar{
+        zoom: 0.5;
+    }
+
+    #sloganProdutos{
+        zoom: 0.5;
+    }
+
+    #footer{
+        zoom: 0.5;
+    }
+
+    #copyright{
+        zoom: 0.5;
+    }
+
+}
+@media (min-width: 767px) {
+    nav img{
+        width: 100%;
+    }
+}
+@media (min-width: 1023px) and (max-width: 1440px) {
+     nav img{
+         width: 20%;
+     }
+    .product-grid4 .product-image4 img{
+        padding: 20px;
+    }
+
+    #navbar ul li a{
+        font-size: 14px;
+    }
+}

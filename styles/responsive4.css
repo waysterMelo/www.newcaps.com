@@ -1,0 +1,83 @@
+@media (min-width: 320px) and (max-width: 414px) {
+    body{
+        background-image: linear-gradient( 109.6deg,  rgba(14,11,56,1) 11.2%, rgba(239,37,37,1) 91.1% );
+    }
+    nav img{
+        width: 70%;background-color: whitesmoke;
+
+    }
+    #top .menu{
+        padding: 0;
+        margin: 0;
+    }
+    #slider .carousel-caption h1{
+        font-size: 2rem;
+    }
+    #slider .carousel-caption h2{
+        font-size: 1rem;
+    }
+    #slider .carousel-inner{
+        height: 300px;
+    }
+    #slider .carousel-inner img{
+        height: 300px;
+    }
+    #diferenciais{
+        zoom: 0.5;
+        margin-top: -70%;
+    }
+    #diferenciais .dif_col {
+        padding: 0;
+        margin: 0;
+    }
+    #news{
+        margin-top: 410px;
+        padding-bottom: 30px;
+        margin-top: -10%;
+
+    }
+    #news h2{
+        padding-top: 30px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: white;
+    }
+    #produtos {
+        min-height: auto;
+        max-height: available;
+        overflow: auto;
+    }
+    #produtos .product-grid4{
+       zoom: 0.5;
+
+    }
+    #produtos .product-image4 img{
+        zoom: 0.9;
+    }
+    #produtos .price{
+        color: white;
+    }
+    #produtos .title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        min-height: 70px;
+        max-height: 70px;
+    }
+
+    #footer{
+        zoom: 0.5;
+    }
+
+    #copyright{
+        zoom: 0.5;
+    }
+}
+@media (min-width: 1023px) and (max-width: 1025px) {
+    nav img{
+        width: 20%;
+    }
+
+    #navbar ul li a {
+        font-size: 12px;
+    }
+}

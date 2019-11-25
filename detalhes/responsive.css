@@ -1,0 +1,42 @@
+@media (min-width: 320px) and (max-width: 414px) {
+    nav img{
+        width: 70%;background-color: whitesmoke;
+    }
+    #top .menu{
+        padding: 0;
+        margin: 0;
+    }
+    #produtos .product-grid4{
+        margin: auto;
+    }
+    #produtos .price{
+        color: darkblue;
+    }
+    #produtos .title{
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    #maisFotos img{
+      width: 100%;
+    }
+
+
+}
+@media (min-width: 767px) {
+    nav img{
+        width: 100%;
+    }
+}
+@media (min-width: 1023px) and (max-width: 1440px) {
+     nav img{
+         width: 20%;
+     }
+    .product-grid4 .product-image4 img{
+        padding: 20px;
+    }
+
+    #navbar ul li a{
+        font-size: 14px;
+    }
+}
