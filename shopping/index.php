@@ -13,11 +13,7 @@ include('../functions/functions.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shopping</title>
     <link rel="stylesheet" href="../styles/bootstrap4.1.min.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="../styles/estilo5.css">
-=======
-    <link rel="stylesheet" href="../styles/estilo3.css">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
     <script src="../js/jquery.min.js"></script>
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="responsive4.css">
@@ -97,11 +93,7 @@ include('../functions/functions.php');
     </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<<<<<<< HEAD
     <img src="../images/logo.png" alt="Logo new caps" class="img-fluid">
-=======
-    <img src="../admin_area/admin_images/logo.svg" alt="Logo new caps" class="img-fluid">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -158,13 +150,9 @@ include('../functions/functions.php');
         </div>
 
         <div class="row">
-<<<<<<< HEAD
-            <div class="col-md-3 col-lg-3 col-12" id="sidebar">
-                  <?php include ('../includes/sidebar.php')?>
-=======
+
             <div class="col-md-3 col-lg-3">
                 <?php include ('../includes/sidebar.php')?>
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
             </div>
 
             <div class="col-md-9 col-lg-9 col-12" id="sloganProdutos">

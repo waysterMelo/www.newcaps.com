@@ -33,11 +33,7 @@ if (isset($_GET['produto'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Detalhes | New Caps Oficial</title>
     <link rel="stylesheet" href="../styles/bootstrap4.1.min.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="../styles/estilo5.css">
-=======
-    <link rel="stylesheet" href="../styles/estilo3.css">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
     <script src="../js/jquery.min.js"></script>
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="responsive.css">
@@ -118,7 +114,7 @@ if (isset($_GET['produto'])) {
     </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img src="../images/logo.svg" alt="Logo new caps" class="img-fluid">
+    <img src="../images/logo.png" alt="Logo new caps" class="d-block w-25">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -360,25 +356,16 @@ if (isset($_GET['produto'])) {
                     $like_img = $row['img1'];
                     $url = $row['url'];
                     echo "
-<<<<<<< HEAD
-                             <div class=\"card\">
-=======
                              <div class=\"card \">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
                    <div class='card-title'>
                     <h5 class=\"text-center mt-3\">$like_title</h5>
                     </div>
                     <img style='width: 150px;' src='../admin_area/product_images/$like_img'
                         class=\"card-img-top img-fluid mx-auto\" alt=\"bone\">
                     <p class=\"text-center\">R$ $price</p>
-<<<<<<< HEAD
-                    <a href=\"?produto=$like_id\" class=\"btn btn-danger col-12 col-md-6 mx-auto py-3 mb-2\"><i class='fa fa-plus'></i> Detalhes</a>
-=======
                     <a href=\"?produto=$like_id\" class=\"btn btn-danger col-6 mx-auto py-3 mb-2\"><i class='fa fa-plus'></i> Detalhes</a>
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
                 </div>
                       ";
-
                 }
                 ?>
             </div>
@@ -401,11 +388,7 @@ if (isset($_GET['produto'])) {
                     <img style='width: 150px;' src='../admin_area/product_images/$like_img'
                         class=\"card-img-top img-fluid mx-auto\" alt=\"bone\">
                     <p class=\"text-center\">R$ $price</p>
-<<<<<<< HEAD
-                    <a href=\"?produto=$like_id\" class=\"btn btn-danger col-12 col-md-6 mx-auto py-3 mb-2\"><i class='fa fa-plus'></i> Detalhes</a>
-=======
                     <a href=\"?produto=$like_id\" class=\"btn btn-danger col-6 mx-auto py-3 mb-2\"><i class='fa fa-plus'></i> Detalhes</a>
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
                 </div>
                       ";
 
@@ -432,11 +415,7 @@ if (isset($_GET['produto'])) {
                     <img style='width: 150px;' src='../admin_area/product_images/$like_img'
                         class=\"card-img-top img-fluid mx-auto\" alt=\"bone\">
                     <p class=\"text-center\">R$ $price</p>
-<<<<<<< HEAD
-                    <a href=\"?produto=$like_id\" class=\"btn btn-danger col-12 col-md-6 mx-auto py-3 mb-2\"><i class='fa fa-plus'></i> Detalhes</a>
-=======
                     <a href=\"?produto=$like_id\" class=\"btn btn-danger col-6 mx-auto py-3 mb-2\"><i class='fa fa-plus'></i> Detalhes</a>
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
                 </div>
                       ";
 

@@ -12,19 +12,12 @@ include "../functions/functions.php";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <script src="../js/jquery.min.js"></script>
-<<<<<<< HEAD
     <link rel="stylesheet" href="../styles/estilo5.css">
     <link rel="stylesheet" href="../styles/bootstrap4.1.min.css">
     <link rel="stylesheet" href="../styles/jquery-confirm.min.css">
     <script src="../js/jquery-confirm.min.js"></script>
     <link rel="stylesheet" href="cart_responsive1.css">
     <link rel="stylesheet" href="table-basic.css">
-=======
-    <link rel="stylesheet" href="../styles/estilo3.css">
-    <link rel="stylesheet" href="../styles/bootstrap4.1.min.css">
-    <link rel="stylesheet" href="../styles/jquery-confirm.min.css">
-    <script src="../js/jquery-confirm.min.js"></script>
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
 </head>
 <body class="bg-light">
 
@@ -102,11 +95,7 @@ include "../functions/functions.php";
     </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<<<<<<< HEAD
     <img src="../images/logo.png" alt="Logo new caps" class="d-block w-25 mr-5">
-=======
-    <img src="../admin_area/admin_images/logo.svg" alt="Logo new caps" class="img-fluid">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -177,7 +166,6 @@ include "../functions/functions.php";
                     $ip = get_ip();
                     $selectcar = "select * from cart where session_id ='$sId' and dtremoved is NULL";
                     $run = mysqli_query($con, $selectcar);
-<<<<<<< HEAD
                     $count = mysqli_num_rows($run)
                     ?>
                     <p class="card-text text-muted" > Voce tem <?php echo $count; ?> item(s) no carrinho </p>
@@ -263,215 +251,6 @@ include "../functions/functions.php";
                           </div>
                           <!--end TABELA DOS BOTOES -->
                       </div>
-=======
-                    $count = mysqli_num_rows($run);
-
-
-                    if (isset($_POST['calcular_frete'])) {
-
-                        $cep_origem = "35720000";     // Seu CEP , ou CEP da Loja
-                        $cep_destino = $_POST['cep']; // CEP do cliente, que irá vim via POST
-                        /* DADOS DO PRODUTO A SER ENVIADO */
-                        $peso = .3;
-                        $valor = "20,00";
-                        $tipo_do_frete = '04510';
-                        $altura = 20;
-                        $largura = 20;
-                        $comprimento = 20;
-                        $url = "http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?";
-                        $url .= "nCdEmpresa=";
-                        $url .= "&sDsSenha=";
-                        $url .= "&sCepOrigem=" . $cep_origem;
-                        $url .= "&sCepDestino=" . $cep_destino;
-                        $url .= "&nVlPeso=" . $peso;
-                        $url .= "&nVlLargura=" . $largura;
-                        $url .= "&nVlAltura=" . $altura;
-                        $url .= "&nCdFormato=1";
-                        $url .= "&nVlComprimento=" . $comprimento;
-                        $url .= "&sCdMaoProria=n";
-                        $url .= "&nVlValorDeclarado=" . $valor;
-                        $url .= "&sCdAvisoRecebimento=n";
-                        $url .= "&nCdServico=" . $tipo_do_frete;
-                        $url .= "&nVlDiametro=0";
-                        $url .= "&StrRetorno=xml";
-                        $xml = simplexml_load_file($url);
-                        $fretePac = $xml->cServico;
-                        $valordofretePac = $fretePac->Valor;
-                        $prazoPac = $fretePac->PrazoEntrega;
-
-                        $cep_origem = "35720000";     // Seu CEP , ou CEP da Loja
-                        $cep_destino = $_POST['cep']; // CEP do cliente, que irá vim via POST
-                        /* DADOS DO PRODUTO A SER ENVIADO */
-                        $peso = .3;
-                        $valor = "20,00";
-                        $tipo_do_frete = '04014';
-                        $altura = 20;
-                        $largura = 20;
-                        $comprimento = 20;
-                        $url = "http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?";
-                        $url .= "nCdEmpresa=";
-                        $url .= "&sDsSenha=";
-                        $url .= "&sCepOrigem=" . $cep_origem;
-                        $url .= "&sCepDestino=" . $cep_destino;
-                        $url .= "&nVlPeso=" . $peso;
-                        $url .= "&nVlLargura=" . $largura;
-                        $url .= "&nVlAltura=" . $altura;
-                        $url .= "&nCdFormato=1";
-                        $url .= "&nVlComprimento=" . $comprimento;
-                        $url .= "&sCdMaoProria=n";
-                        $url .= "&nVlValorDeclarado=" . $valor;
-                        $url .= "&sCdAvisoRecebimento=n";
-                        $url .= "&nCdServico=" . $tipo_do_frete;
-                        $url .= "&nVlDiametro=0";
-                        $url .= "&StrRetorno=xml";
-                        $xml = simplexml_load_file($url);
-                        $freteSedex = $xml->cServico;
-                        $valordofreteSedex = $freteSedex->Valor;
-                        $prazoSedex = $freteSedex->PrazoEntrega;
-
-                        $sedex = "sedex";
-                        $pac = "pac";
-
-
-                    }
-
-
-                    ?>
-                    <p class="card-text text-muted" > Voce tem <?php echo $count; ?> item(s) no carrinho </p>
-                    <div class="table-responsive-lg">
-                        <table class="table table-dark">
-                            <thead class="text-center">
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Produto</th>
-                                <th scope="col">Quantidade</th>
-                                <th scope="col">Preço un</th>
-                                <th scope="col">Tamanho</th>
-                                <th scope="col">Deletar</th>
-                                <th scope="col" colspan="">Total</th>
-                            </tr>
-                            </thead>
-                            <tbody class="text-center">
-                            <?php
-                            $total = 0;
-                            while($row = mysqli_fetch_array($run)){
-                            $id = $row['id_pro'];
-                            $qty = $row['quantidade'];
-
-                            $products  = "select * from products where id='$id'";
-                            $runproducts = mysqli_query($con, $products);
-                            while($rowP = mysqli_fetch_array($runproducts)){
-
-                            $pro_id = $rowP['id'];
-                            $title = $rowP['title'];
-                            $img1 =  $rowP['img1'];
-                            $price = $rowP['price'];
-                            $sub_total = $rowP['price'] * $qty;
-                            $total += $sub_total;
-                            ?>
-
-                            <tr>
-                                <td>
-                                    <img src="../admin_area/product_images/<?php echo $img1; ?>"
-                                         alt="bone" class="img-fluid img-thumbnail" style="width: 50px">
-                                </td>
-                                <td>
-                                    <a class="text-danger" href="../detalhes/?pro_id=<?php echo $pro_id?>"><?php echo $title; ?></a>
-                                </td>
-                                <td>
-                                    <?php echo $qty; ?>
-                                </td>
-                                <td>
-                                    <?php echo 'R$' . number_format($price, 2, ',', '.');?>
-                                <td>
-                                    Único
-                                </td>
-                                <td>
-                                    <input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>" >
-                                </td>
-                                <td class="text-center" colspan="5">
-                                    <?php echo 'R$' . number_format($sub_total, 2, ',', '.');?>
-                                </td>
-                            </tr>
-                            <?php } } ?>
-                            </tbody>
-                        </table>
-                        <table class="table table-dark">
-                            <tbody>
-                            <tr>
-                                <th>
-                                    <a href="../shopping/" class="btn btn-success">
-                                        <i class="fa fa-chevron-left"></i> Continuar Comprando
-                                    </a>
-                                </th>
-                                <th class="float-right">
-                                    <button class="btn btn-light" type="submit" name="atualizar" value="">
-                                        <i class="fa fa-refresh"></i> Atualizar Carrinho
-                                    </button>
-                                </th>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <tbody>
-                                <tr class="bg-light text-dark">
-                                    <td colspan="3" class="text-center pl-4">
-                                        <div class="form-group-sm col-md-12">
-                                            <div class="input-group input-group-sm mb-3">
-                                                <label class=" font-weight-bold text-center" style="font-size: 12px;">Calcular taxa de entrega
-                                                    <div class="input-group-text">
-                                                        <input name="cep" id="cep" type="text" class="text-center" placeholder="DIGITE O CEP">
-                                                        <button type="submit"  name="calcular_frete"  class="btn btn-danger form-control"><i class="fa fa-search mx-2"></i></button>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </td>
-                            <td colspan="5">
-                                <div class="form-group row justify-content-center">
-                                    <h6 class="text-right pt-4" id="retorno">
-                                        <form action="" method="post" enctype="multipart/form-data">
-                                         <div id="frete_div">
-                                             <div class="text-dark pb-3 text-center">
-                                                 <input type="checkbox" name="freteInput[]" class="form-check-input" value="<?php echo @$valordofretePac?>,<?= @$prazoPac?>,<?=@$pac?>">
-                                                 <b>Pac:</b> R$ <span id="fretePac" class="py-5"><?php echo @$valordofretePac?></span>
-                                                 <span id="prazoPac" class="py-5">Prazo: <?php echo @$prazoPac?> dia(s)</span>
-                                             </div>
-                                             <div class="text-dark text-center">
-                                                 <input type="checkbox" name="freteInput[]" class="form-check-input" value="<?php echo @$valordofreteSedex?>,<?= @$prazoSedex?>,<?=@$sedex?>">
-                                                 <span class="py-5 custom-checkbox"><b>Sedex:</b> R$ <?php echo @$valordofreteSedex ?>
-                                            </span><span class="py-5">Prazo: <?php echo @$prazoSedex ?> dia(s)</span>
-                                             </div>
-                                             <div class="text-center">
-                                                 <button type="submit" name="selecionar_frete" class="btn btn-danger mt-2">adicionar frete</button>
-                                             </div>
-                                         </div>
-                                        </form>
-                                        <?php
-                                        if (isset($_POST['selecionar_frete'])){
-                                            $campo = $_POST['freteInput'];
-                                            foreach ($campo as $v){
-                                                global $v;
-                                                $sdf = substr(@$v,0,5);
-                                                $sdf2 = str_replace(',', '.', $sdf);
-                                            }
-                                            echo "<script>
-                                                     $.alert({
-                                                     title: 'Caro Cliente',
-                                                     content: 'seu frete foi adicionado !',
-                                                     theme: 'dark'
-                                                    });
-                                                 </script>";
-                                        }
-                                        ?>
-                                    </h6>
-                                </div>
-                            </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
                 </form>
             </div>
             </div>
@@ -521,18 +300,6 @@ where session_id ='$sId' and id_pro = '$remove_id'";
                                 R$<?php echo number_format($total, 2, ',', '.');?>
                             </th>
                         </tr>
-
-                        <tr>
-<<<<<<< HEAD
-=======
-                            <td>Entrega</td>
-                            <th class="input-group-append ml-3">
-                                <span class="input-group-text bg-light border-0"><i class="fa fa-money"></i></span>
-                                <input style="width: 50%;" name="frete_valor" class="ml-2 input-group-append form-control bg-light border-0 text-center"
-                                      disabled  type="text" value="<?php echo substr(@$v,0,5);?>" />
-                            </th>
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
-                        </tr>
                         </tbody><!-- tbody Ends -->
                         <tfoot>
                         <th class="text-left h2">
@@ -541,15 +308,7 @@ where session_id ='$sId' and id_pro = '$remove_id'";
 
                         <th class="text-right h2">
                             <p id="total_carrinho">
-                                <?php
-<<<<<<< HEAD
-                                $totalValor = number_format($total, 2, '.', ',');
-                               echo number_format( $total,2,',','.');
-=======
-                                $totalValor = $total + @$sdf2;
-                                echo number_format($totalValor,2,',','.');
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
-                                ?>
+                                R$<?php echo number_format($total, 2, ',', '.');?>
                             </p>
                         </th>
                         </tfoot>
@@ -787,11 +546,7 @@ if (frete == '') {
     $('#frete_div').html('');
 }else{
 }
-<<<<<<< HEAD
-
 $('.tableBasic').basictable();
-=======
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
 </script>
 </body>
 </html>

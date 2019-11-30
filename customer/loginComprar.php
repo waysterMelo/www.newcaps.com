@@ -13,11 +13,7 @@ session_start();
         <title>Login | New Caps</title>
         <link rel="stylesheet" href="../styles/bootstrap4.1.min.css">
         <link rel="stylesheet" href="../styles/jquery-confirm.min.css">
-<<<<<<< HEAD
         <link rel="stylesheet" href="../styles/estilo5.css">
-=======
-        <link rel="stylesheet" href="../styles/estilo3.css">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
         <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
         <script src="../js/jquery.min.js"></script>
         <script src="../js/jquery-confirm.min.js"></script>
@@ -108,7 +104,7 @@ session_start();
         </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="../images/logo.png" alt="Logo new caps" class="img-fluid">
+        <img src="../images/logo.png" alt="Logo new caps" class="d-block w-25">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -212,17 +208,11 @@ session_start();
                                                      title: 'Caro Cliente',
                                                      content: 'login efetuado com sucesso!',
                                                      theme: 'dark',                        
-<<<<<<< HEAD
                                                     });                                                                              
                                                 window.open('../pedido.php?frete_valor=$frete&cliente_id=$cliente','_self');
                                                 
                                               </script>";
-=======
-                                                    }); 
-window.open('../pedido.php?frete=$frete','_self');
-</script>";
 
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
                                         }else{
                                             echo "<script>
                                                   $.alert({

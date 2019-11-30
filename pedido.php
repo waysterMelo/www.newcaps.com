@@ -1,14 +1,9 @@
 <?php
 session_start();
+
 if (!isset($_SESSION['email'])){
-<<<<<<< HEAD
+
    if (@$_GET['frete_valor']){
-=======
-    $frete_valor = $_GET['frete'];
-    echo "<script>alert('Loge na sua conta para continuar')</script>";
-    echo "<script>window.open('./customer/loginComprar.php?frete=$frete_valor','_self')</script>";
-}else {
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
 
        @$frete_valor = $_GET['frete_valor'];
        echo "<script>alert('Loge na sua conta para continuar')</script>";

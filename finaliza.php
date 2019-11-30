@@ -13,16 +13,11 @@ include "functions/functions.php";
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Revise sua compra | New Caps Oficial</title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="styles/estilo5.css">
-=======
-    <link rel="stylesheet" href="styles/estilo3.css">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
     <link rel="stylesheet" href="./styles/animate.css">
     <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/bootstrap4.1.min.css">
     <script src="./js/jquery.min.js"></script>
-
 </head>
 <body style="background-color: whitesmoke;">
 <div id="preloader">
@@ -93,7 +88,7 @@ include "functions/functions.php";
     </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img src="./images/logo.png" alt="Logo new caps" class="img-fluid">
+    <img src="./images/logo.png" alt="Logo new caps" class="d-block w-25">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

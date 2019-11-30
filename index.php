@@ -12,13 +12,8 @@ include('./functions/functions.php');
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Caps Oficial</title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="styles/estilo5.css">
-=======
-    <link rel="stylesheet" href="styles/estilo3.css">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
     <link rel="stylesheet" href="styles/animate.css">
-    <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/bootstrap4.1.min.css">
     <script src="js/jquery.min.js"></script>
@@ -26,10 +21,7 @@ include('./functions/functions.php');
 
 </head>
 <body>
-<<<<<<< HEAD
 
-=======
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
 <div id="top">
     <div class="container-fluid">
         <div class="row">
@@ -90,11 +82,7 @@ include('./functions/functions.php');
     </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<<<<<<< HEAD
-    <img src="images/logo.png" alt="Logo new caps" class="img-fluid">
-=======
-    <img src="./admin_area/admin_images/logo.svg" alt="Logo new caps" class="img-fluid">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
+    <img src="/images/logo.png" alt="Logo new caps" class="img-fluid" style="width: 250px">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -124,11 +112,10 @@ include('./functions/functions.php');
                 }
                 ?>
             <li>
-<<<<<<< HEAD
+
             <li class="nav-item mx-3">
-=======
+
             <li class="nav-item ml-2">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
                 <a class="nav-link" href="./contato">Contato</a>
             </li>
             <li class="nav-item">
@@ -144,10 +131,6 @@ include('./functions/functions.php');
         </ul>
     </div>
 </nav>
-<<<<<<< HEAD
-=======
-
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
     <div class="container-fluid" id="slider">
         <div class="col-md-12" style="padding: 0;">
 
@@ -211,31 +194,19 @@ include('./functions/functions.php');
     </div>
     <div class="container" id="diferenciais" >
         <div class="row">
-<<<<<<< HEAD
-            <div class="col-sm-6 col-md-4 col-4 dif_col">
-=======
             <div class="col-sm-6 col-md-4 col-12 dif_col">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
-                <div class="thumbnail">
-                    <img src="images/foto1.jpg" alt="tendencias" class="img-fluid">
-                    <h2 class="text-capitalize text-center" style="margin-top: -20vh">As últimas tendências.</h2>
-                </div>
-            </div>
-<<<<<<< HEAD
-            <div class="col-sm-6 col-md-4 col-4 dif_col">
-=======
-            <div class="col-sm-6 col-md-4 col-12 dif_col">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
                 <div class="thumbnail">
                     <img src="images/foto2.jpg" alt="gostos" class="img-fluid">
                     <h2 class="text-center text-capitalize" style="margin-top: -20vh">diversos gostos</h2>
                 </div>
             </div>
-<<<<<<< HEAD
-            <div class="col-sm-6 col-md-4 col-4 dif_col">
-=======
             <div class="col-sm-6 col-md-4 col-12 dif_col">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
+                <div class="thumbnail">
+                    <img src="images/foto3.jpg" alt="qualidade" class="img-fluid">
+                    <h2 class="text-capitalize text-center" style="margin-top: -20vh">Excelente qualidade no atendimento</h2>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-12 dif_col">
                 <div class="thumbnail">
                     <img src="images/foto3.jpg" alt="qualidade" class="img-fluid">
                     <h2 class="text-capitalize text-center" style="margin-top: -20vh">Excelente qualidade no atendimento</h2>
@@ -244,11 +215,8 @@ include('./functions/functions.php');
         </div>
     </div>
     <div class="container py-4" id="news">
-<<<<<<< HEAD
         <h2 class="text-capitalize font-weight-bold text-white">Útimas novidades</h2>
-=======
         <h2 class="text-capitalize font-weight-bold">Útimas novidades</h2>
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
         <hr>
         </div>
     <div class="container" id="produtos">
@@ -269,11 +237,7 @@ include('./functions/functions.php');
                     $newpreco = number_format($price,2,',','.');
                     $url = $rs['url'];
 
-<<<<<<< HEAD
                     echo " <div class='col-md-6 col-lg-4 d-flex flex-row col-6 mx-auto'>
-=======
-                    echo " <div class='col-md-3 col-lg-4 d-flex flex-row col-12 mx-auto'>
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
                    <div class=\"product-grid4\">
                     <div class=\"product-image4\">
                         <a href=\"./detalhes/?produto=$id\">
@@ -300,22 +264,16 @@ include('./functions/functions.php');
                 ?>
             </div>
             <div class="row justify-content-end">
-<<<<<<< HEAD
                 <a href="shopping/?all_products" class="btn btn-secondary my-5">ver todos produtos</a>
-=======
                 <a href="shopping/?all_products" class="btn btn-danger my-5">ver todos produtos</a>
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
             </div>
         </div>
     </div>
 
 <div id="footer"><!-- footer Starts -->
     <div class="container"><!-- container Starts -->
-<<<<<<< HEAD
         <div class="row pt-5">
-=======
         <div class="row" >
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
             <div class="col-lg-2 col-md-3 col-sm-6 text-center pt-3">
                 <h4 style="color:red;">Categorias</h4>
                 <ul class="navbar-nav" >
@@ -356,16 +314,12 @@ include('./functions/functions.php');
             <div class="col-md-3">
                 <h4 class="text-center" style="color: red;"> Redes Sociais </h4>
                 <p class="text-center"><!-- social Starts --->
-<<<<<<< HEAD
                     <a href="https://www.facebook.com/jhonatan.stetcar" target="_blank"><i><img src="./images/social/facebook.png" alt="facebook"></i></a>
                     <a href="https://www.instagram.com/newcaps.oficial/" target="_blank"><i><img src="./images/social/instagram.png" alt="facebook"></i></a>
                     <a href="contato@newcapsoficial.com.br" target="_blank"><i><img src="./images/social/email.png" alt="email"></i></a>
-=======
+
                     <a href="#"><i><img src="./images/social/facebook.png" alt="facebook"></i></a>
                     <a href="#"><i><img src="./images/social/instagram.png" alt="facebook"></i></a>
-                    <a href="#"><i><img src="./images/social/google+.png" alt="facebook"></i></a>
-                    <a href="#"><i><img src="./images/social/email.png" alt="facebook"></i></a>
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
                 </p><!-- social Ends --->
             </div>
             <div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Starts -->
@@ -379,11 +333,7 @@ include('./functions/functions.php');
         </div><!-- row Ends -->
     </div><!-- container Ends -->
 </div><!-- footer Ends -->
-<<<<<<< HEAD
-<div id="copyright" style="background-color: transparent" ><!-- copyright Starts -->
-=======
 <div id="copyright" style="background-image: linear-gradient(to right top, #ff0000, #ff0706, #ff0d0d, #ff1312, #ff1717);" ><!-- copyright Starts -->
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
 
     <div class="container" ><!-- container Starts -->
 
