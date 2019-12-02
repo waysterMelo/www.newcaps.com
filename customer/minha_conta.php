@@ -17,28 +17,11 @@ include('../functions/functions.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Minha conta</title>
     <link rel="stylesheet" href="../styles/bootstrap4.1.min.css">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../styles/estilo5.css">
-=======
-    <link rel="stylesheet" href="../styles/estilo3.css">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
+    <link rel="stylesheet" href="../styles/estilo7.css">
     <script src="../js/jquery.min.js"></script>
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
-    <style>
-        .activeSidebar a{
-            background-color: red;
-            color: #000;
-            padding: 10px;
-            border-radius: 10%;
-        }
+    <link rel="stylesheet" href="../styles/responsive-style2.css">
 
-         #sidebar a:hover{
-            background-color: gray;
-            color: #000;
-            padding: 10px;
-            border-radius: 10%;
-        }
-    </style>
 </head>
 <body style="background-color: whitesmoke;">
 

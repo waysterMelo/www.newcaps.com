@@ -12,16 +12,15 @@ include('./functions/functions.php');
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Caps Oficial</title>
-    <link rel="stylesheet" href="styles/estilo5.css">
+    <link rel="stylesheet" href="styles/estilo7.css">
     <link rel="stylesheet" href="styles/animate.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/bootstrap4.1.min.css">
     <script src="js/jquery.min.js"></script>
-    <link rel="stylesheet" href="styles/responsive4.css">
+    <link rel="stylesheet" href="styles/responsive-style2.css">
 
 </head>
 <body>
-
 <div id="top">
     <div class="container-fluid">
         <div class="row">
@@ -81,8 +80,8 @@ include('./functions/functions.php');
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img src="/images/logo.png" alt="Logo new caps" class="img-fluid" style="width: 250px">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="button-nav">
+    <img src="/images/logo.png" alt="Logo new caps" class="img-fluid">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -113,9 +112,9 @@ include('./functions/functions.php');
                 ?>
             <li>
 
-            <li class="nav-item mx-3">
+            <li class="nav-item">
 
-            <li class="nav-item ml-2">
+            <li class="nav-item">
                 <a class="nav-link" href="./contato">Contato</a>
             </li>
             <li class="nav-item">
@@ -133,7 +132,6 @@ include('./functions/functions.php');
 </nav>
     <div class="container-fluid" id="slider">
         <div class="col-md-12" style="padding: 0;">
-
             <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -192,35 +190,28 @@ include('./functions/functions.php');
             </div>
         </div>
     </div>
-    <div class="container" id="diferenciais" >
+    <div class="container" id="diferenciais">
         <div class="row">
-            <div class="col-sm-6 col-md-4 col-12 dif_col">
-                <div class="thumbnail">
-                    <img src="images/foto2.jpg" alt="gostos" class="img-fluid">
-                    <h2 class="text-center text-capitalize" style="margin-top: -20vh">diversos gostos</h2>
-                </div>
+            <div class="col-sm-6 col-md-4 col-4 dif_col">
+                <img src="/images/foto1.jpg" alt="gostos" class="d-block w-100">
+                       <h2 class="text-center text-capitalize">diversos gostos</h2>
             </div>
-            <div class="col-sm-6 col-md-4 col-12 dif_col">
-                <div class="thumbnail">
-                    <img src="images/foto3.jpg" alt="qualidade" class="img-fluid">
-                    <h2 class="text-capitalize text-center" style="margin-top: -20vh">Excelente qualidade no atendimento</h2>
-                </div>
+            <div class="col-sm-6 col-md-4 col-4 dif_col2">
+                <img src="/images/foto2.jpg" alt="gostos" class="d-block w-100">
+                    <h2 class="text-capitalize text-center">Excelente qualidade no atendimento</h2>
             </div>
-            <div class="col-sm-6 col-md-4 col-12 dif_col">
-                <div class="thumbnail">
-                    <img src="images/foto3.jpg" alt="qualidade" class="img-fluid">
-                    <h2 class="text-capitalize text-center" style="margin-top: -20vh">Excelente qualidade no atendimento</h2>
-                </div>
+            <div class="col-sm-6 col-md-4 col-4 dif_col3">
+                <img src="/images/foto3.jpg" alt="gostos" class="d-block w-100">
+                <h2 class="text-capitalize text-center">Excelente qualidade no atendimento</h2>
             </div>
         </div>
     </div>
     <div class="container py-4" id="news">
         <h2 class="text-capitalize font-weight-bold text-white">Útimas novidades</h2>
-        <h2 class="text-capitalize font-weight-bold">Útimas novidades</h2>
         <hr>
         </div>
     <div class="container" id="produtos">
-        <div class="col-lg-12 col-12 col-md-12" style="margin-bottom: 15px; margin-left: 4%">
+        <div class="col-lg-12 col-12 col-md-12">
             <div class="row justify-content-center">
                 <?php
                 global $con;
@@ -240,22 +231,22 @@ include('./functions/functions.php');
                     echo " <div class='col-md-6 col-lg-4 d-flex flex-row col-6 mx-auto'>
                    <div class=\"product-grid4\">
                     <div class=\"product-image4\">
-                        <a href=\"./detalhes/?produto=$id\">
+                        <a href=\"./detalhes/$url\">
                             <img src=\"./admin_area/product_images/$img1\" class=\"img-fluid pic-1\">
                             <img src=\"./admin_area/product_images/$img2\" class=\"img-fluid pic-2\">
                         </a>
                         
                         <ul class=\"social\">
-                            <li><a href=\"./detalhes/?produto=$id\" data-trip=\"Ver\"><i class=\"fa fa-eye\"></i></a></li>
+                            <li><a href=\"./detalhes/$url\" data-trip=\"Ver\"><i class=\"fa fa-eye\"></i></a></li>
                         </ul>
                         <span class=\"product-new-label\">Lançamento</span>
                     </div>
                     <div class=\"product-content\">
-                        <h3 class=\"title\"><a href=\"./detalhes/?produto=$id\">$title</a></h3>
+                        <h3 class=\"title\"><a href=\"./detalhes/$url\">$title</a></h3>
                         <div class=\"price\">
                             R$ $newpreco
                         </div>
-                        <a href=\"./detalhes/?produto=$id\" class=\"add-to-cart\">Ver Detalhes</a>
+                        <a href=\"./detalhes/$url\" class=\"add-to-cart\">Ver Detalhes</a>
                     </div>
                 </div>
             </div>           
@@ -264,8 +255,7 @@ include('./functions/functions.php');
                 ?>
             </div>
             <div class="row justify-content-end">
-                <a href="shopping/?all_products" class="btn btn-secondary my-5">ver todos produtos</a>
-                <a href="shopping/?all_products" class="btn btn-danger my-5">ver todos produtos</a>
+                <a href="shopping/?all_products" class="btn btn-outline-light my-5">ver todos produtos</a>
             </div>
         </div>
     </div>
@@ -347,7 +337,7 @@ include('./functions/functions.php');
 
         <div class="col-md-6 ml-auto" ><!-- col-md-6 Starts -->
              <p class="text-right" >
-                   Desenvolvido por:<a class="mx-2 text-dark" target="_blank" href="https://www.linkedin.com/in/wayster-de-melo-b32278105/" >Wayster H. De Melo</a>
+                 Desenvolvido por:<a class="text-dark mx-2" target="_blank" href="https://api.whatsapp.com/send?phone=31971624192&text=Ola%20,%20gostaria%20de%20fazer%20um%20or%C3%A7amento" >Wayster H. De Melo</a>
              </p>
 
         </div><!-- col-md-6 Ends -->

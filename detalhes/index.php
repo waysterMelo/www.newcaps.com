@@ -7,7 +7,7 @@ include('../functions/functions.php');
 global $con;
 if (isset($_GET['produto'])) {
     $produto_id = $_GET['produto'];
-    $sql = "select * from products where id ='$produto_id'";
+    $sql = "select * from products where url ='$produto_id'";
     $query = mysqli_query($con, $sql);
     $rowProduto = mysqli_fetch_array($query);
     $title = $rowProduto['title'];
@@ -33,17 +33,16 @@ if (isset($_GET['produto'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Detalhes | New Caps Oficial</title>
     <link rel="stylesheet" href="../styles/bootstrap4.1.min.css">
-    <link rel="stylesheet" href="../styles/estilo5.css">
+    <link rel="stylesheet" href="../styles/estilo7.css">
     <script src="../js/jquery.min.js"></script>
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="../styles/responsive-style2.css">
 </head>
 <body style="background-color: whitesmoke;">
 
 <div id="preloader">
     <div id="status"></div>
 </div>
-
 <div id="top">
     <div class="container-fluid">
         <div class="row">
@@ -113,15 +112,14 @@ if (isset($_GET['produto'])) {
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img src="../images/logo.png" alt="Logo new caps" class="d-block w-25">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="button-nav">
+    <img src="../images/logo.png" alt="Logo new caps" class="img-fluid">
+    <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mr-auto">
-            <form class="form-inline mx-5">
+            <form class="form-inline mx-5 d-none d-lg-block">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <input type="text" class="form-control" placeholder="pesquisar" aria-label="" aria-describedby="basic-addon1">
@@ -206,7 +204,7 @@ if (isset($_GET['produto'])) {
                     </div>
                 </div>
             </section>
-            <section id="ladodireito2" class="mb-5">
+            <section id="ladodireito2">
                 <div class="card sidebar-menu">
                     <div class="card-heading" style="background-image: linear-gradient(to bottom, #ff0000, #ff0706, #ff0d0d, #ff1312, #ff1717);">
                         <h4 class="card-title font-weight-bold ml-3 pt-2">
@@ -234,9 +232,9 @@ if (isset($_GET['produto'])) {
                 </div>
             </section>
         </div>
-        <div class="col-md-9 col-lg-9">
+        <div class="col-md-9 col-lg-9 col-12 d-block">
             <div class="row">
-                <div class="col-sm-6 col-lg-6" id="productMain">
+                <div class="col-sm-6 col-lg-6 col-6" id="productMain">
                     <div id="mainImage">
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner carousel-fade">
@@ -261,67 +259,72 @@ if (isset($_GET['produto'])) {
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-6">
-                            <?php addCart(); ?>
-                        <form class="form-horizontal" action="?add_cart=<?php echo $produto_id;?>" method="post" enctype="multipart/form-data">
-                            <div class="card border-dark rounded-5">
-                                <div class="card-header p-0">
-                                    <div style="background-color: black" class="text-white text-center py-2">
-                                        <h3 class="text-capitalize"><?php echo $title?></h3>
-                                        <p class="m-0"><?php echo $cat_title ?></p>
-                                    </div>
-                                </div>
-                                <div class="card-body p-3">
-                                    <!--Body-->
-                                    <div class="form-group row justify-content-center">
-                                        <label for="" class="mx-2 col-form-label">Quantidade</label>
-                                             <select name="qtd">
-                                            <?php
-                                            for ($i = 1; $i <= $qtd; $i++){
-                                                echo "
-                                                     <option>$i</option>
-                                               ";
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
-                                    <div class="form-group row justify-content-center">
-                                        <select name="p_size" class="py-2">
-                                            <option>Tamanho único</option>
-                                        </select>
-                                    </div>
-
-                                        <div class="col-md-12 input-group row justify-content-center">
-                                            <h1 class="input-group-append">
-                                              <i class="fa fa-money  border-0">
-                                                  <?php echo number_format($price, 2, ',', '.')?>
-                                              </i>
-                                            </h1>
-                                        </div>
-
-
-                                    <div class="text-center">
-                                        <input type="submit" value="Adicionar ao carrinho" class="btn btn-danger py-2">
-                                    </div>
+                <div class="col-sm-6 col-lg-6 col-6">
+                    <?php addCart(); ?>
+                    <form class="form-horizontal" action="?add_cart=<?php echo $produto_id;?>" method="post" enctype="multipart/form-data">
+                        <div class="card border-dark rounded-5 my-2">
+                            <div class="card-header p-0">
+                                <div style="background-color: black" class="text-white text-center py-2">
+                                    <h3 class="text-capitalize"><?php echo $title?></h3>
+                                    <p class="m-0"><?php echo $cat_title ?></p>
                                 </div>
                             </div>
-                        </form>
-                    <div class="row my-5" id="thumbs">
-                         <div class="col-xs-4 col-md-4 col-4" id="maisFotos">
-                             <img src="../admin_area/product_images/<?php echo $img1?>" class="w-100 img-thumbnail">
-                         </div>
-                         <div class="col-xs-4 col-md-4 col-4" id="maisFotos">
-                             <img src="../admin_area/product_images/<?php echo $img2?>"
-                                  class="w-100 img-thumbnail">
-                         </div>
-                         <div class="col-xs-4 col-md-4 col-4" id="maisFotos">
-                             <img src="../admin_area/product_images/<?php echo $img3?>"
-                                  class="w-100 img-thumbnail">
-                         </div>
-                    </div>
+                            <div class="card-body p-3">
+                                <!--Body-->
+                                <div class="form-group row justify-content-center">
+                                    <label for="" class="mx-2 col-form-label">Quantidade</label>
+                                    <select name="qtd">
+                                        <?php
+                                        for ($i = 1; $i <= $qtd; $i++){
+                                            echo "
+                                                     <option>$i</option>
+                                               ";
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="form-group row justify-content-center">
+                                    <select name="p_size" class="py-2">
+                                        <option>Tamanho único</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-12 input-group row justify-content-center">
+                                    <h1 class="input-group-append">
+                                        <i class="fa fa-money  border-0">
+                                            <?php echo number_format($price, 2, ',', '.')?>
+                                        </i>
+                                    </h1>
+                                </div>
+
+
+                                <div class="text-center">
+                                    <input type="submit" value="Adicionar ao carrinho" class="btn btn-danger py-2">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="col-lg-12 col-12" id="moreImages">
+                        <div class="row my-3" id="thumbs">
+                            <div class="col-xs-4 col-md-4 col-4" id="maisFotos">
+                                <img src="../admin_area/product_images/<?php echo $img1?>" class="img-fluid">
+                            </div>
+                            <div class="col-xs-4 col-md-4 col-4" id="maisFotos">
+                                <img src="../admin_area/product_images/<?php echo $img2?>"
+                                     class="img-fluid">
+                            </div>
+                            <div class="col-xs-4 col-md-4 col-4" id="maisFotos">
+                                <img src="../admin_area/product_images/<?php echo $img3?>"
+                                     class="img-fluid">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            <div class="row pb-5">
+                </div>
+            <div class="row">
+
+            </div>
+            <div class="row pb-2 col-12">
                 <div class="card" id="details" style="width: 100%">
                     <h1 class="card-title">Detalhes do Produto</h1>
                     <p class="text-muted">
@@ -344,84 +347,34 @@ if (isset($_GET['produto'])) {
                         <h3 class="text-center">Voçê Tambêm vai Gostar</h3>
                     </div>
                 </div>
-            <div class="col-lg-3 like_product col-md-4 col-6">
-                <?php
-                $sql = "select * from products order by RAND() LIMIT 0,1";
-                $query = mysqli_query($con, $sql);
-                while($row = mysqli_fetch_array($query)){
-                    $like_id = $row['id'];
-                    $like_title = $row['title'];
-                    $like_price = $row['price'];
-                    $price = number_format($like_price,2,',','.');
-                    $like_img = $row['img1'];
-                    $url = $row['url'];
-                    echo "
-                             <div class=\"card \">
-                   <div class='card-title'>
-                    <h5 class=\"text-center mt-3\">$like_title</h5>
-                    </div>
-                    <img style='width: 150px;' src='../admin_area/product_images/$like_img'
-                        class=\"card-img-top img-fluid mx-auto\" alt=\"bone\">
-                    <p class=\"text-center\">R$ $price</p>
-                    <a href=\"?produto=$like_id\" class=\"btn btn-danger col-6 mx-auto py-3 mb-2\"><i class='fa fa-plus'></i> Detalhes</a>
-                </div>
-                      ";
-                }
-                ?>
-            </div>
-            <div class="col-lg-3 like_product col-md-4 col-6">
-                <?php
-                $sql = "select * from products order by RAND() LIMIT 0,1";
-                $query = mysqli_query($con, $sql);
-                while($row = mysqli_fetch_array($query)){
-                    $like_id = $row['id'];
-                    $like_title = $row['title'];
-                    $like_price = $row['price'];
-                    $price = number_format($like_price,2,',','.');
-                    $like_img = $row['img1'];
-                    $url  = $row['url'];
-                    echo "
-                             <div class=\"card \">
-                   <div class='card-title'>
-                    <h5 class=\"text-center mt-3\">$like_title</h5>
-                    </div>
-                    <img style='width: 150px;' src='../admin_area/product_images/$like_img'
-                        class=\"card-img-top img-fluid mx-auto\" alt=\"bone\">
-                    <p class=\"text-center\">R$ $price</p>
-                    <a href=\"?produto=$like_id\" class=\"btn btn-danger col-6 mx-auto py-3 mb-2\"><i class='fa fa-plus'></i> Detalhes</a>
-                </div>
-                      ";
-
-                }
-                ?>
-            </div>
-            <div class="col-lg-3 like_product col-md-4 col-6 mx-auto">
-                <?php
-
-                $sql = "select * from products order by RAND() LIMIT 0,1";
-                $query = mysqli_query($con, $sql);
-                while($row = mysqli_fetch_array($query)){
-                    $like_id = $row['id'];
-                    $like_title = $row['title'];
-                    $like_price = $row['price'];
-                    $price = number_format($like_price,2,',','.');
-                    $like_img = $row['img1'];
-                    $url = $row['url'];
-                    echo "
-                             <div class=\"card \">
-                   <div class='card-title'>
-                    <h5 class=\"text-center mt-3\">$like_title</h5>
-                    </div>
-                    <img style='width: 150px;' src='../admin_area/product_images/$like_img'
-                        class=\"card-img-top img-fluid mx-auto\" alt=\"bone\">
-                    <p class=\"text-center\">R$ $price</p>
-                    <a href=\"?produto=$like_id\" class=\"btn btn-danger col-6 mx-auto py-3 mb-2\"><i class='fa fa-plus'></i> Detalhes</a>
-                </div>
-                      ";
-
-                }
-                ?>
-            </div>
         </div>
+<div class="container pb-5" id="youMayLike">
+    <div class="row justify-content-center">
+        <?php
+            $sql = "select * from products order by RAND() LIMIT 0,4";
+            $query = mysqli_query($con, $sql);
+            while($row = mysqli_fetch_array($query)){
+                $like_id = $row['id'];
+                $like_title = $row['title'];
+                $like_price = $row['price'];
+                $price = number_format($like_price,2,',','.');
+                $like_img = $row['img1'];
+                $url = $row['url'];
+                echo "
+                <div class=\"col-lg-3 like_product col-md-4 col-6 pb-4\">
+                             <div class=\"card \">
+                   <div class='card-title'>
+                    <h5 class=\"text-center mt-3\">$like_title</h5>
+                    </div>
+                    <img style='width: 150px;' src='../admin_area/product_images/$like_img'
+                        class=\"card-img-top img-fluid mx-auto\" alt=\"bone\">
+                    <p class=\"text-center\">R$ $price</p>
+                    <a href=\"$url\" class=\"btn btn-danger col-12 mx-auto py-3 mb-2\"><i class='fa fa-plus'></i> Detalhes</a>
+                </div> 
+                </div>";
+            }
+            ?>
+        </div>
+    </div>
 
 <?php include('../includes/footer.php'); ?>

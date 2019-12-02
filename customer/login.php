@@ -11,10 +11,10 @@ session_start();
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Login | New Caps</title>
         <link rel="stylesheet" href="../styles/bootstrap4.1.min.css">
-        <link rel="stylesheet" href="../styles/estilo5.css">
+        <link rel="stylesheet" href="../styles/estilo7.css">
         <script src="../js/jquery.min.js"></script>
         <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="responsive.css">
+        <link rel="stylesheet" href="../styles/responsive-style2.css">
         <style>
             .activeSidebar a{
                 background-color: red;
@@ -101,8 +101,8 @@ session_start();
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="../images/logo.png" alt="Logo new caps" class="d-block w-25">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="button-nav">
+        <img src="../images/logo.png" alt="Logo new caps" class="img-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -198,11 +198,11 @@ session_start();
                                         if ($row_client){
                                             $_SESSION['email'] = $email;
                                             $_SESSION['senha'] = $senha;
-                                            echo "<script>window.open('../carrinho/','_self')</script>";
+                                            echo "<script>window.open('../shopping/','_self')</script>";
 
                                         }else{
                                             echo "<script>alert('Login Não autorizado')</script>";
-                                            echo "<script>window.open(index.php,'_self')</script>";
+                                            echo "<script>window.open('login.php','_self')</script>";
 
                                         }
                                     }

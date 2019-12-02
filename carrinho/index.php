@@ -12,15 +12,14 @@ include "../functions/functions.php";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <script src="../js/jquery.min.js"></script>
-    <link rel="stylesheet" href="../styles/estilo5.css">
+    <link rel="stylesheet" href="../styles/estilo7.css">
     <link rel="stylesheet" href="../styles/bootstrap4.1.min.css">
     <link rel="stylesheet" href="../styles/jquery-confirm.min.css">
     <script src="../js/jquery-confirm.min.js"></script>
-    <link rel="stylesheet" href="cart_responsive1.css">
     <link rel="stylesheet" href="table-basic.css">
+    <link rel="stylesheet" href="../styles/responsive-style2.css">
 </head>
 <body class="bg-light">
-
 <div id="preloader">
     <div id="status"></div>
 </div>
@@ -94,14 +93,14 @@ include "../functions/functions.php";
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img src="../images/logo.png" alt="Logo new caps" class="d-block w-25 mr-5">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="button-nav">
+    <img src="/images/logo.png" alt="Logo new caps" class="img-fluid">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mx-auto">
             <form class="form-inline mx-2 d-none d-sm-block">
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -111,7 +110,7 @@ include "../functions/functions.php";
                 </div>
             </form>
             <li class="nav-item ml-2">
-                <a class="nav-link" href="../index.php">Pagina Inicial</a>
+                <a class="nav-link" href="../">Pagina Inicial</a>
             </li>
             <li class="nav-item ml-2">
                 <a class="nav-link" href="../shopping">Produtos</a>
@@ -119,22 +118,24 @@ include "../functions/functions.php";
             <li class="nav-item ml-2">
                 <?php
                 if (!isset($_SESSION['email'])){
-                    echo  "<a class='text-capitalize nav-link' href='../customer/login.php' >Minha conta</a>";
+                    echo "<a class='nav-link' href='../customer/login.php'>Minha Conta</a>";
                 }else{
-                    echo  "<a class='text-capitalize nav-link' href='../customer/minha_conta.php?meus_pedidos' >Pedidos</a>";
+                    echo "<a class='nav-link' href='../customer/minha_conta.php?meus_pedidos'>Pedidos</a>";
                 }
                 ?>
             <li>
 
-            <li class="nav-item ml-2">
+            <li class="nav-item">
+
+            <li class="nav-item">
                 <a class="nav-link" href="../contato">Contato</a>
             </li>
             <li class="nav-item">
-                <a style="background-color: black;" class="btn btn-md nav-link text-white" href="../carrinho/"><!-- btn btn-primary navbar-btn right Starts -->
+                <a style="background-color: black;" class="btn btn-dark btn-md nav-link text-white" href="../carrinho/"><!-- btn btn-primary navbar-btn right Starts -->
 
                     <i class="fa fa-shopping-cart"></i>
 
-                    <span><?php echo itens(); ?> item(s) no carrinho </span>
+                    <span><?php itens(); ?> item(s) no carrinho </span>
 
                 </a><!-- btn btn-primary navbar-btn right Ends -->
 
@@ -142,7 +143,6 @@ include "../functions/functions.php";
         </ul>
     </div>
 </nav>
-
 <div id="content"><!-- content Starts -->
     <div class="container-fluid"><!-- container Starts -->
         <div class="col-md-12" ><!--- col-md-12 Starts -->
@@ -155,7 +155,6 @@ include "../functions/functions.php";
         </div><!--- col-md-12 Ends -->
     </div><!-- container Ends -->
 </div><!-- content Ends -->
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-8" id="cart"><!-- col-md-9 Starts -->
@@ -163,7 +162,6 @@ include "../functions/functions.php";
                 <form action="" method="post" enctype="multipart/form-data" ><!-- form Starts -->
                     <h2 class="card-title"> Carrinho </h2>
                     <?php
-                    $ip = get_ip();
                     $selectcar = "select * from cart where session_id ='$sId' and dtremoved is NULL";
                     $run = mysqli_query($con, $selectcar);
                     $count = mysqli_num_rows($run)
@@ -230,7 +228,6 @@ include "../functions/functions.php";
                               </tbody>
                           </table>
                           <!--end TABELA DOS PRODUTOS -->
-
                           <!--TABELA DOS BOTOES -->
                               <table class="table table-dark">
                                   <tbody>
@@ -329,104 +326,17 @@ where session_id ='$sId' and id_pro = '$remove_id'";
         </div>
 
 <div class="container" style="background-color: transparent">
-    <div class="row justify-content-center">
-        <div class="col-lg-12 text-center">
-            <div class="section-title">
+        <div class="col-lg-12 text-left text-white">
+            <div class="pb-4">
                 <h1>Lançamentos da semana</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.</p>
+                <p>produtos que você com certeza vai gostar <i class="fa fa-smile-o"></i></p>
             </div>
         </div>
-    </div>
 </div>
-<div class="row">
+<div class="row pb-5">
     <div class="col-lg-8">
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                <div class="single-related-product d-flex">
-                    <a href="#">
-                        <img src="../admin_area/product_images/bone1.jpg" class="img-fluid" style="height: 100px">
-                    </a>
-                    <div class="desc">
-                        <a href="#" class="title">Bone Lacoste</a>
-                        <div class="price">
-                            <h6>$189.00</h6>
-                            <h6 class="l-through">$210.00</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                <div class="single-related-product d-flex">
-                    <a href="#">
-                        <img src="../admin_area/product_images/bone2.jpg" class="img-fluid" style="height: 100px">
-                    </a>
-                    <div class="desc">
-                        <a href="#" class="title">Bone Lacoste</a>
-                        <div class="price">
-                            <h6>$189.00</h6>
-                            <h6 class="l-through">$210.00</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                <div class="single-related-product d-flex">
-                    <a href="#">
-                        <img src="../admin_area/product_images/bone1.jpg" class="img-fluid" style="height: 100px">
-                    </a>
-                    <div class="desc">
-                        <a href="#" class="title">Bone Lacoste</a>
-                        <div class="price">
-                            <h6>$189.00</h6>
-                            <h6 class="l-through">$210.00</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                <div class="single-related-product d-flex">
-                    <a href="#">
-                        <img src="../admin_area/product_images/bone2.jpg" class="img-fluid" style="height: 100px">
-                    </a>
-                    <div class="desc">
-                        <a href="#" class="title">Bone Lacoste</a>
-                        <div class="price">
-                            <h6>$189.00</h6>
-                            <h6 class="l-through">$210.00</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                <div class="single-related-product d-flex">
-                    <a href="#">
-                        <img src="../admin_area/product_images/bone2.jpg" class="img-fluid" style="height: 100px">
-                    </a>
-                    <div class="desc">
-                        <a href="#" class="title">Bone Lacoste</a>
-                        <div class="price">
-                            <h6>$189.00</h6>
-                            <h6 class="l-through">$210.00</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                <div class="single-related-product d-flex">
-                    <a href="#">
-                        <img src="../admin_area/product_images/bone1.jpg" class="img-fluid" style="height: 100px">
-                    </a>
-                    <div class="desc">
-                        <a href="#" class="title">Bone Lacoste</a>
-                        <div class="price">
-                            <h6>$189.00</h6>
-                            <h6 class="l-through">$210.00</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <?php echo productsRandom() ?>
         </div>
     </div>
     <div class="col-lg-4 col-sm-12 col-md-12">
@@ -515,7 +425,7 @@ where session_id ='$sId' and id_pro = '$remove_id'";
 
         <div class="col-md-6 ml-auto" ><!-- col-md-6 Starts -->
             <p class="text-right" >
-                Desenvolvido por:<a class="text-dark mx-2" target="_blank" href="https://www.linkedin.com/in/wayster-de-melo-b32278105/" >Wayster H. De Melo</a>
+                Desenvolvido por:<a class="text-dark mx-2" target="_blank" href="https://api.whatsapp.com/send?phone=31971624192&text=Ola%20,%20gostaria%20de%20fazer%20um%20or%C3%A7amento" >Wayster H. De Melo</a>
             </p>
 
         </div><!-- col-md-6 Ends -->
@@ -530,22 +440,8 @@ where session_id ='$sId' and id_pro = '$remove_id'";
     $(window).on('load',function () {
         $('#status').fadeOut();
         $('#preloader').delay(350).fadeOut('slow');
-        $('body').delay(350).css({ 'overflow' : 'visible'})
-
-        let campo_frete = document.getElementById("fretevalor").value;
-        if (campo_frete == ''){
-            $('#mp').attr('disabled','disabled');
-            $('#pg').attr('disabled','disabled');
-        }else {
-
-        }
+        $('body').delay(350).css({ 'overflow' : 'visible'});
     });
-
-let frete = document.getElementById("fretePac").innerHTML;
-if (frete == '') {
-    $('#frete_div').html('');
-}else{
-}
 $('.tableBasic').basictable();
 </script>
 </body>

@@ -13,7 +13,7 @@ include "functions/functions.php";
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Revise sua compra | New Caps Oficial</title>
-    <link rel="stylesheet" href="styles/estilo5.css">
+    <link rel="stylesheet" href="styles/estilo7.css">
     <link rel="stylesheet" href="./styles/animate.css">
     <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/bootstrap4.1.min.css">

@@ -13,15 +13,10 @@ include('../functions/functions.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Minha Conta</title>
     <link rel="stylesheet" href="../styles/bootstrap4.1.min.css">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../styles/estilo5.css">
-=======
-    <link rel="stylesheet" href="../styles/estilo3.css">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
+    <link rel="stylesheet" href="../styles/estilo7.css">
     <script src="../js/jquery.min.js"></script>
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../styles/responsive4.css">
-
+    <link rel="stylesheet" href="../styles/responsive-style2.css">
 </head>
 <body style="background-color: whitesmoke;">
 
@@ -78,7 +73,7 @@ include('../functions/functions.php');
                     <li>
                         <?php
                         if (!isset($_SESSION['email'])){
-                            echo "<a href='login.php'> Login </a>";
+                            echo "<a href='../contato'>Contato</a>";
                         }else {
                             echo "<a href='../customer/logout.php'> Sair </a>";
                         }
@@ -91,7 +86,7 @@ include('../functions/functions.php');
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="button-nav">
     <img src="../images/logo.png" alt="Logo new caps" class="img-fluid">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

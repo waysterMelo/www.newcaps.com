@@ -59,11 +59,7 @@ body,html {
 }
 
 nav img{
-<<<<<<< HEAD:styles/estilo5.css
- width: 20%;
-=======
- width: 200px;
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9:styles/estilo.css
+ width: 320px;
 }
 
 
@@ -95,18 +91,21 @@ header input[type=search] {
 #menu{
  background-image: radial-gradient( circle farthest-corner at 10% 20%,
  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90% );
-
 }
 
 #diferenciais{
- min-height: 220px;
- max-height: 220px;
-}
-#diferenciais .thumbnail{
- min-height: 210px;
- max-height: 210px;
+ padding-bottom: 100px;
 }
 
+#diferenciais .dif_col h2{
+ margin-top: -30%;
+}
+#diferenciais .dif_col2 h2{
+ margin-top: -30%;
+}
+#diferenciais .dif_col3 h2{
+ margin-top: -30%;
+}
 #diferenciais h2 {
  color: navajowhite;
 }
@@ -364,9 +363,7 @@ header input[type=search] {
 }
 
 #top .offer .btn {
-
  text-transform: uppercase;
-
 }
 
 @media (max-width: 991px) {
@@ -393,18 +390,14 @@ header input[type=search] {
 }
 
 #top ul.menu {
-
  padding-top: 5px;
-
  margin: 0;
  text-align: right;
  font-size: 12px;
  list-style: none;
-
 }
 
 @media (max-width: 991px) {
-
  #top ul.menu {
   text-align: center;
  }
@@ -412,15 +405,11 @@ header input[type=search] {
 }
 
 #top ul.menu > li {
-
  display: inline-block;
-
 }
 
 #top ul.menu > li a {
-
  color: #eeeeee;
-
 }
 
 #top ul.menu > li + li:before {
@@ -634,10 +623,6 @@ header input[type=search] {
  max-height: 150px;
  overflow-y: scroll;
 }
-
-
-
-
 .divider-text {
  position: relative;
  text-align: center;

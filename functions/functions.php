@@ -185,3 +185,30 @@ function itens(){
     $itens = mysqli_num_rows($rs);
     echo  $itens;
 }
+function productsRandom(){
+    global $db;
+    $sql  = "select * from products order by id desc limit 0,6";
+    $query = mysqli_query($db, $sql);
+    while ($rs = mysqli_fetch_array($query)){
+        $nome = $rs['title'];
+        $img = $rs['img1'];
+        $preco = $rs['price'];
+        $url = $rs['url'];
+        echo "
+         <div class=\"col-lg-4 col-md-4 col-sm-6 mb-20\">
+                <div class=\"single-related-product d-flex\">
+                    <a href=\"#\">
+                        <img src=\"../admin_area/product_images/$img\" class=\"img-fluid\" style=\"height: 100px\">
+                    </a>
+                    <div class=\"desc\">
+                        <a href=\"../detalhes/?produto=$url\" class=\"title text-primary\">$nome</a>
+                        <div class=\"price\">
+                            <h6 class=\"text-success\">R$ $preco</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        ";
+    }
+
+}

@@ -72,7 +72,7 @@
 
         <div class="col-md-6 ml-auto" ><!-- col-md-6 Starts -->
             <p class="text-right" >
-                Desenvolvido por:<a class="text-dark mx-2" target="_blank" href="https://www.linkedin.com/in/wayster-de-melo-b32278105/" >Wayster H. De Melo</a>
+                Desenvolvido por:<a class="text-dark mx-2" target="_blank" href="https://api.whatsapp.com/send?phone=31971624192&text=Ola%20,%20gostaria%20de%20fazer%20um%20or%C3%A7amento" >Wayster H. De Melo</a>
             </p>
 
         </div><!-- col-md-6 Ends -->

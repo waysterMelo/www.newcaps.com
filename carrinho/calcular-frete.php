@@ -1,6 +1,7 @@
 <?php
 session_start();
 $sId = session_id();
+$email = $_SESSION['email'];
 include '../includes/db.php';
 include "../functions/functions.php";
 ?>
@@ -11,7 +12,7 @@ include "../functions/functions.php";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <script src="../js/jquery.min.js"></script>
-    <link rel="stylesheet" href="../styles/estilo5.css">
+    <link rel="stylesheet" href="../styles/estilo7.css">
     <link rel="stylesheet" href="../styles/bootstrap4.1.min.css">
     <link rel="stylesheet" href="../styles/jquery-confirm.min.css">
     <script src="../js/jquery-confirm.min.js"></script>
@@ -258,7 +259,7 @@ include "../functions/functions.php";
                                       $sdf = substr(@$v,0,5);
                                       $sdf2 = str_replace(',', '.', $sdf);
                                       echo "
-                                    <script>window.open('../pedido.php?frete_valor=$v','_self')</script>
+                                    <script>window.open('../pedido.php?frete_valor=$v&email=$email','_self')</script>
                                   ";
                                   }
                               }

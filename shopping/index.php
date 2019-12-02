@@ -13,10 +13,10 @@ include('../functions/functions.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shopping</title>
     <link rel="stylesheet" href="../styles/bootstrap4.1.min.css">
-    <link rel="stylesheet" href="../styles/estilo5.css">
+    <link rel="stylesheet" href="../styles/estilo7.css">
     <script src="../js/jquery.min.js"></script>
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="responsive4.css">
+    <link rel="stylesheet" href="../styles/responsive-style2.css">
 
 </head>
 <body style="background-color: whitesmoke;">
@@ -148,14 +148,12 @@ include('../functions/functions.php');
                 <li>Shopping</li>
             </ul>
         </div>
-
         <div class="row">
-
-            <div class="col-md-3 col-lg-3">
+            <div class="col-md-3 col-lg-3 col-12" id="sidebar">
                 <?php include ('../includes/sidebar.php')?>
             </div>
 
-            <div class="col-md-9 col-lg-9 col-12" id="sloganProdutos">
+            <div class="col-md-9 col-lg-9 col-12" id="produtos">
                 <?php
                 if (!isset($_GET['marca'])){
                     if (!isset($_GET['categoria'])){
@@ -169,7 +167,6 @@ include('../functions/functions.php');
                             ";
                     }
                 }
-
                 ?>
                 <div class="row justify-content-center">
                     <?php
@@ -201,21 +198,21 @@ include('../functions/functions.php');
                  <div class='col-md-6 col-lg-4 d-flex flex-row justify-content-center col-4'>
                    <div class=\"product-grid4\">
                     <div class=\"product-image4\">
-                        <a href=\"$url\">
+                        <a href=\"../detalhes/$url\">
                             <img src=\"../admin_area/product_images/$img1\" class=\"img-fluid pic-1\">
                             <img src=\"../admin_area/product_images/$img2\" class=\"img-fluid pic-2\">
                         </a>
                         <ul class=\"social\">
-                            <li><a href='$url' data-trip=\"Ver\"><i class=\"fa fa-eye\"></i></a></li>
+                            <li><a href='../detalhes/$url' data-trip=\"Ver\"><i class=\"fa fa-eye\"></i></a></li>
                         </ul>
                         <span class=\"product-new-label\">Lançamento</span>
                     </div>
                     <div class=\"product-content\">
-                        <h3 class=\"title\"><a href=\"../detalhes/?produto=$id\">$title</a></h3>
+                        <h3 class=\"title\"><a href=\"../detalhes/$url\">$title</a></h3>
                         <div class=\"price\">
                             R$ $newpreco
                         </div>
-                        <a href='../detalhes/?produto=$id' class=\"add-to-cart\">Detalhes</a>
+                        <a href='../detalhes/$url' class=\"add-to-cart\">Detalhes</a>
                     </div>
                 </div>
             </div>";
@@ -258,6 +255,5 @@ include('../functions/functions.php');
         </div>
     </div>
 </div>
-
 
 <?php include ('../includes/footer.php')?>

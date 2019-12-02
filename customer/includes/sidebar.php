@@ -13,11 +13,7 @@
                } else {
                    echo "             
                <div class=\" py-5\">
-<<<<<<< HEAD
                 <img src=\"../images/logo.png\" alt=\"foto do usuario\" class=\"img-fluid img-thumbnail border-0\">
-=======
-                <img src=\"../admin_area/admin_images/logo.svg\" alt=\"foto do usuario\" class=\"img-fluid img-thumbnail border-0\">
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
             </div>
         <br>
         <div class=\"card-heading\">

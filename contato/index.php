@@ -11,12 +11,12 @@ include('../functions/functions.php');
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Caps Contato</title>
-    <link rel="stylesheet" href="../styles/estilo5.css">
+    <link rel="stylesheet" href="../styles/estilo7.css">
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/bootstrap4.1.min.css">
     <link rel="stylesheet" href="../styles/jquery-confirm.min.css">
+    <link rel="stylesheet" href="../styles/responsive-style2.css">
     <script src="../js/jquery.min.js"></script>
-
 </head>
 <body style="background-color: whitesmoke">
 
@@ -94,7 +94,7 @@ include('../functions/functions.php');
     </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img src="../images/logo.png" alt="Logo new caps" class="d-block w-25">
+    <img src="../images/logo.png" alt="Logo new caps" class="img-fluid">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -156,11 +156,11 @@ include('../functions/functions.php');
     </div>
 </div>
 
-<section style=" color: white; height: 600px">
-    <div class="container-fluid" >
+<section id="contato" class="pb-5">
+    <div class="container-fluid">
         <div class="col-md-12 col-lg-12">
             <div class="py-5 text-center">
-                <h2>CONTATO</h2>
+                <h2 class="text-white">CONTATO</h2>
             </div>
         </div>
     </div>
@@ -229,24 +229,6 @@ include('../functions/functions.php');
             </div>
         </div>
     </div>
-
-</section>
-
-<section style="">
-    <div class="py-5">
-
-    </div>
 </section>
 
 <?php include "../includes/footer.php"; ?>
-
-<script src="../js/bootstrap4.1.min.js"></script>
-<script type="text/javascript">
-    $(window).on('load',function () {
-        $('#status').fadeOut();
-        $('#preloader').delay(350).fadeOut('slow');
-        $('body').delay(350).css({ 'overflow' : 'visible'})
-    });
-</script>
-</body>
-</html>

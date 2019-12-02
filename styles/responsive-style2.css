@@ -1,0 +1,361 @@
+@media (min-width: 320px) and (max-width: 350px) {
+    #cart .th_um{
+        display: inline-flex;
+        margin-left: 20px;
+    }
+    #cart .th_dois{
+        margin-right: 25px;
+    }
+    #tableFrete .frete_show{
+        margin: auto;
+        display: inline-flex;
+    }
+    #frete_div .frete_show{
+        margin-left: -25%;
+        zoom: 0.6;
+    }
+    #frete_div .imagemCorreios{
+        width: 80%;
+    }
+    #tableFrete .calcula_frete_td{
+        min-width: 50px;
+        max-width: 50px;
+    }
+    #tableFrete .formClass label{
+        margin: auto;
+
+    }
+    #top .menu{
+        padding: 0;
+        margin: 0;
+    }
+    #contato{
+        height: auto;
+    }
+
+    #moreImages{
+        zoom: 0.4;
+    }
+    body{
+        background-image: linear-gradient( 109.6deg,  rgba(14,11,56,1) 11.2%, rgba(239,37,37,1) 91.1% );
+    }
+    nav img{
+        width: 80%;
+    }
+    #navbar ul{
+        text-align: center;
+    }
+     #button-nav button{
+         margin: 0 auto;
+    }
+    #top .menu{
+        padding: 0;
+        margin: 0;
+    }
+    #slider .carousel-caption h1{
+        font-size: 2rem;
+    }
+    #slider .carousel-caption h2{
+        font-size: 1rem;
+    }
+    #slider .carousel-inner{
+        height: 300px;
+    }
+    #slider .carousel-inner img{
+        height: 300px;
+    }
+    #diferenciais{
+        zoom: 0.5;
+        margin-top: -70%;
+    }
+    #diferenciais .dif_col h2 {
+        margin-top: -50%;
+    }
+    #diferenciais .dif_col2 h2{
+        margin-top: -100%;
+    }
+    #diferenciais .dif_col3 h2{
+        margin-top: -100%;
+    }
+    #news{
+        margin-top: 410px;
+        padding-bottom: 30px;
+        margin-top: -10%;
+
+    }
+    #news h2{
+        padding-top: 30px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: white;
+    }
+    #produtos {
+        min-height: auto;
+        max-height: available;
+        overflow: auto;
+    }
+    #produtos .product-grid4{
+       zoom: 0.6;
+    }
+    #produtos .product-image4 img{
+        zoom: 0.9;
+    }
+    #produtos .price{
+        color: white;
+    }
+    #produtos .title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        min-height: 70px;
+        max-height: 70px;
+    }
+    #sidebar{
+        zoom: 0.9;
+    }
+    #footer{
+        zoom: 0.5;
+    }
+
+    #copyright{
+        zoom: 0.5;
+    }
+    #content{
+        zoom: 0.6;
+    }
+    #youMayLike{
+        zoom: 0.4;
+        padding-bottom: 15px;
+    }
+}
+@media (min-width: 360px) and (max-width: 376px) {
+
+    #top .menu{
+        padding: 0;
+        margin: 0;
+    }
+    #produtos .product-grid4{
+        margin: auto;
+    }
+    #produtos .price{
+        color: darkblue;
+    }
+    #produtos .title{
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    #cart .th_um{
+        zoom: 0.6;
+    }
+    #cart .th_dois{
+        zoom: 0.6;
+    }
+
+    #moreImages{
+        zoom: 0.4;
+    }
+    #navbar ul{
+        text-align: center;
+    }
+    nav img{
+        width: 80%;
+    }
+    #button-nav button{
+        margin: 0 auto;
+    }
+    #top .menu{
+        padding: 0;
+        margin: 0;
+    }
+    #slider .carousel-caption h1{
+        font-size: 2rem;
+    }
+    #slider .carousel-caption h2{
+        font-size: 1rem;
+    }
+    #slider .carousel-inner{
+        height: 300px;
+    }
+    #slider .carousel-inner img{
+        height: 300px;
+    }
+    #diferenciais{
+        zoom: 0.6;
+        margin-top: -60%;
+    }
+    #diferenciais .dif_col h2 {
+        margin-top: -80%;
+    }
+    #diferenciais .dif_col2 h2{
+        margin-top: -100%;
+    }
+    #diferenciais .dif_col3 h2{
+        margin-top: -100%;
+    }
+    #news{
+        margin-top: 410px;
+        padding-bottom: 30px;
+        margin-top: -10%;
+
+    }
+    #news h2{
+        padding-top: 30px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: white;
+    }
+    #produtos {
+        min-height: auto;
+        max-height: available;
+        overflow: auto;
+    }
+    #produtos .product-grid4{
+        zoom: 0.5;
+
+    }
+    #produtos .product-image4 img{
+        zoom: 0.9;
+    }
+    #produtos .price{
+        color: white;
+    }
+    #produtos .title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        min-height: 70px;
+        max-height: 70px;
+    }
+
+    #footer{
+        zoom: 0.9;
+    }
+
+    #copyright{
+        zoom: 0.5;
+    }
+    #content{
+        zoom: 0.6;
+    }
+    #youMayLike{
+        zoom: 0.5;
+    }
+}
+@media (min-width: 414px) and (max-width: 415px) {
+    #cart .th_um{
+        display: inline;
+        margin-left: 50px;
+    }
+    #cart .padding_xs{
+        margin: 10px;
+    }
+    #cart .th_dois{
+        margin-right: 80px;
+    }
+
+    #moreImages{
+        zoom: 0.4;
+    }
+    #navbar ul{
+        text-align: center;
+    }
+    nav img{
+        width: 80%;
+    }
+
+    #button-nav button{
+        margin: 0 auto;
+    }
+    #top .menu{
+        padding: 0;
+        margin: 0;
+    }
+    #slider .carousel-caption h1{
+        font-size: 2rem;
+    }
+    #slider .carousel-caption h2{
+        font-size: 1rem;
+    }
+    #slider .carousel-inner{
+        height: 300px;
+    }
+    #slider .carousel-inner img{
+        height: 300px;
+    }
+    #diferenciais{
+        zoom: 0.4;
+        margin-top: -55%;
+    }
+    #diferenciais .dif_col h2 {
+        margin-top: -40%;
+    }
+    #diferenciais .dif_col2 h2{
+        margin-top: -50%;
+    }
+    #diferenciais .dif_col3 h2{
+        margin-top: -50%;
+    }
+    #news{
+        margin-top: 5%;
+        padding-bottom: 30px;
+    }
+    #news h2{
+        padding-top: 30px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: white;
+    }
+    #produtos {
+        min-height: auto;
+        max-height: available;
+        overflow: auto;
+    }
+    #produtos .product-grid4{
+        zoom: 0.7;
+
+    }
+    #produtos .product-image4 img{
+        zoom: 0.9;
+    }
+    #produtos .price{
+        color: white;
+    }
+    #produtos .title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        min-height: 70px;
+        max-height: 70px;
+    }
+
+    #footer{
+        zoom: 0.8;
+    }
+
+    #copyright{
+        zoom: 0.5;
+    }
+    #content{
+        zoom: 0.6;
+    }
+    #youMayLike{
+        zoom: 0.4;
+    }
+}
+@media (min-width: 768px) and (max-width: 800px) {
+    #navbar ul{
+        text-align: center;
+    }
+    #content{
+        zoom: 0.6;
+    }
+    #youMayLike{
+        zoom: 0.9;
+    }
+}
+@media (min-width: 1023px) and (max-width: 1025px) {
+    nav img{
+        width: 20%;
+    }
+
+    #navbar ul li a {
+        font-size: 12px;
+    }
+}

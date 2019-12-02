@@ -11,10 +11,7 @@
             <tr>
                 <th>P.N</th>
                 <th>Produto</th>
-<<<<<<< HEAD
                 <th>Imagem</th>
-=======
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
                 <th>Valor Total</th>
                 <th>Fatura</th>
                 <th>Quantidade</th>
@@ -64,21 +61,15 @@
                 $frete = $rs2['frete'];
                 $freteComPonto = str_replace(',', '.', $frete);
 
-                $valor_total = $sub_total + $freteComPonto;
-
+//                $valor_total = $sub_total + $freteComPonto;
 
                 $i++;
-
-
                 ?>
 
                     <tr class="text-center">
                         <th class="text-center"><?php echo $i; ?></th>
                         <td class="text-center text-capitalize"><?php echo $nome ?></td>
-<<<<<<< HEAD
                         <td><img src="../admin_area/product_images/<?php echo $img ?>" width="30px;" height="30px" alt="produto"></td>
-=======
->>>>>>> 7ba390ffad33be5d42f726c3dada46d2239d34a9
                         <td class="text-center">R$ <?php echo number_format($valor_total,2,',','.'); ?></td>
                         <td class="text-center"><?php echo $fatura; ?></td>
                         <td class="text-center"><?php echo $qtd; ?></td>
